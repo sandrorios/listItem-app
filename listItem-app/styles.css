@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+#input-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#filter {
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
