@@ -11,8 +11,15 @@ function addItem(e) {
     if(newItem === ''){
         alert("Please add an item");
         return;
+
     }
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(newItem));
+    listItem.appendChild(li);
+
+    inputField.value = '';
+    inputField.focus();
 }
 
 
-formItem.addEventListener('click', addItem);
+formItem.addEventListener('submit', addItem);
