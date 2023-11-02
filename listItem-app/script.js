@@ -25,7 +25,7 @@ function addItem(e) {
 function createButton(classes){
     let button = document.createElement('button');
     button.className = classes;
-    let icon = createIcon('fa-solid x-mark');
+    let icon = createIcon('fa-solid fa-xmark');
     button.appendChild(icon);
     return button;
 }
