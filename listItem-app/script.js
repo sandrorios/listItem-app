@@ -20,6 +20,7 @@ function addItem(e) {
     li.appendChild(button);
     inputField.value = '';
     inputField.focus();
+    checkUI();
 }
 
 function createButton(classes){
@@ -40,6 +41,7 @@ function removeItem(e){
     if(e.target.parentElement.classList.contains('remove-item')){
         e.target.parentElement.parentElement.remove();
     }
+    checkUI();
 }
 
 function filterItems(e) {
@@ -54,8 +56,21 @@ function filterItems(e) {
             items.style.display = 'none';
         }
     })
+    checkUI();
 }
 
+function checkUI(){
+    let items = listItem.querySelectorAll('li');
+    if(items.lenth === 0){
+        clearBtn.style.display = 'none';
+        filter.style.display = 'none';
+    }else{
+        clearBtn.style.display = 'block';
+        filter.style.display = 'block';
+    }
+}
+
+checkUI();
 filter.addEventListener('input', filterItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', addItem);
