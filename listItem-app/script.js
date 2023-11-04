@@ -61,7 +61,7 @@ function filterItems(e) {
 
 function checkUI(){
     let items = listItem.querySelectorAll('li');
-    if(items.lenth === 0){
+    if(items.length === 0){
         clearBtn.style.display = 'none';
         filter.style.display = 'none';
     }else{
