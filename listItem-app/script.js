@@ -44,6 +44,13 @@ function removeItem(e){
     checkUI();
 }
 
+function clearAll(){
+    while(listItem.firstChild){
+        listItem.firstChild.remove(listItem.firstChild);
+    }
+    checkUI();
+}
+
 function filterItems(e) {
     let items = listItem.querySelectorAll('li');
     let text = e.target.value.toLowerCase();
@@ -71,6 +78,7 @@ function checkUI(){
 }
 
 checkUI();
+clearBtn.addEventListener('click', clearAll);
 filter.addEventListener('input', filterItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', addItem);
