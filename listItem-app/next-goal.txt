@@ -1,3 +1,5 @@
+local storage and session storage
+
 1. Add items to local storage
 2. Remove items from local storage
 3. Set item to edit
