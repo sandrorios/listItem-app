@@ -4,3 +4,4 @@
 4. Update item and reset state
 5. Prevent duplicate items
 6. Deploy to netlify
+7.
