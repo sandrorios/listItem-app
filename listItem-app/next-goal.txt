@@ -1,1 +1,6 @@
-Code for keeping or not keeping list items in the server.
+1. Add items to local storage
+2. Remove items from local storage
+3. Set item to edit
+4. Update item and reset state
+5. Prevent duplicate items
+6. Deploy to netlify
