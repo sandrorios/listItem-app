@@ -5,22 +5,27 @@ let btn = document.querySelector('.btn');
 let filter = document.getElementById('filter');
 let clearBtn = document.getElementById('clear');
 
-function addItem(e) {
+function onAddItemSubmit(e) {
     e.preventDefault();
     let newItem = inputField.value;
     if(newItem === ''){
         alert("Please add an item");
         return;
-
     }
+
+    addItemToDom(newItem);
+
+    inputField.value = '';
+    inputField.focus();
+    checkUI();
+}
+
+function addItemToDom(item){
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(newItem));
     listItem.appendChild(li);
     let button = createButton('remove-item text-red');
     li.appendChild(button);
-    inputField.value = '';
-    inputField.focus();
-    checkUI();
 }
 
 function createButton(classes){
@@ -81,4 +86,4 @@ checkUI();
 clearBtn.addEventListener('click', clearAll);
 filter.addEventListener('input', filterItems);
 listItem.addEventListener('click', removeItem);
-formItem.addEventListener('submit', addItem);
+formItem.addEventListener('submit', onAddItemSubmit);
