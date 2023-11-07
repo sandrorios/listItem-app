@@ -22,7 +22,7 @@ function onAddItemSubmit(e) {
 
 function addItemToDom(item){
     let li = document.createElement('li');
-    li.appendChild(document.createTextNode(newItem));
+    li.appendChild(document.createTextNode(item));
     listItem.appendChild(li);
     let button = createButton('remove-item text-red');
     li.appendChild(button);
